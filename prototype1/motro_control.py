@@ -5,16 +5,16 @@ import time
 #27 right
 #22 left
 pi_3=pigpio.pi()
-pi_3.write(27, 0) # BCM 将4号引脚设置为低电平
+pi_3.write(27, 0) # BCM 将27号引脚设置为低电平
 pi_3.read(27)
-pi_3.set_PWM_frequency(27, 500)#设定14号引脚产生的pwm波形的频率为50Hz
+pi_3.set_PWM_frequency(27, 500)#设定27号引脚产生的pwm波形的频率为500Hz
 pi_3.set_PWM_range(27, 2000)
 
 
 pi_4=pigpio.pi()
-pi_4.write(22, 0) # BCM 将4号引脚设置为低电平
+pi_4.write(22, 0) # BCM 将22号引脚设置为低电平
 pi_4.read(22)
-pi_4.set_PWM_frequency(22, 500)#设定14号引脚产生的pwm波形的频率为50Hz
+pi_4.set_PWM_frequency(22, 500)#设定22号引脚产生的pwm波形的频率为500Hz
 pi_4.set_PWM_range(22, 2000)
 
 def delayMicrosecond(t):    # 微秒级延时函数
