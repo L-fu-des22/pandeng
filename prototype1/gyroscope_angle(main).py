@@ -11,36 +11,36 @@ pi=pigpio.pi()
 pi_1=pigpio.pi()
 pi_2=pigpio.pi()
 
-pi.write(6, 0) # BCM 将4号引脚设置为低电平
+pi.write(6, 0) # BCM 将6号引脚设置为低电平
 pi.read(6)
-pi.set_PWM_frequency(6, 50)#设定14号引脚产生的pwm波形的频率为50Hz
+pi.set_PWM_frequency(6, 50)#设定6号引脚产生的pwm波形的频率为50Hz
 pi.set_PWM_range(6, 2000)
 
 
 
-pi_1.write(5, 0) # BCM 将5号引脚设置为低电平 left
+pi_1.write(5, 0) # BCM 将6号引脚设置为低电平。从正面看向陀螺仪，左边的舵机
 pi_1.read(5)
-pi_1.set_PWM_frequency(5, 50)#设定18号引脚产生的pwm波形的频率为500Hz
+pi_1.set_PWM_frequency(5, 50)#设定5号引脚产生的pwm波形的频率为500Hz
 pi_1.set_PWM_range(5, 2000)
 
-pi_2.write(13, 0) # BCM 将5号引脚设置为低电平 right
+pi_2.write(13, 0) # BCM 将5号引脚设置为低电平。从正面看向陀螺仪，右边的舵机
 pi_2.read(13)
-pi_2.set_PWM_frequency(13, 50)#设定18号引脚产生的pwm波形的频率为500Hz
+pi_2.set_PWM_frequency(13, 50)#设定13号引脚产生的pwm波形的频率为50Hz
 pi_2.set_PWM_range(13, 2000)
 
 #27 right
 #22 left
 pi_3=pigpio.pi()
-pi_3.write(27, 0) # BCM 将4号引脚设置为低电平
+pi_3.write(27, 0) # BCM 将27号引脚设置为低电平
 pi_3.read(27)
-pi_3.set_PWM_frequency(27, 500)#设定14号引脚产生的pwm波形的频率为50Hz
+pi_3.set_PWM_frequency(27, 500)#设定27号引脚产生的pwm波形的频率为50Hz
 pi_3.set_PWM_range(27, 2000)
 
 
 pi_4=pigpio.pi()
-pi_4.write(22, 0) # BCM 将4号引脚设置为低电平
+pi_4.write(22, 0) # BCM 将22号引脚设置为低电平
 pi_4.read(22)
-pi_4.set_PWM_frequency(22, 500)#设定14号引脚产生的pwm波形的频率为50Hz
+pi_4.set_PWM_frequency(22, 500)#设定22号引脚产生的pwm波形的频率为500Hz
 pi_4.set_PWM_range(22, 2000)
 
 bus = smbus.SMBus(1) # or bus = smbus.SMBus(1) for Revision 2 boards
